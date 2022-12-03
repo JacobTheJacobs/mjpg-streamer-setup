@@ -32,6 +32,14 @@ Installing MJPG-streamer for multiple cameras can be simplified by using the scr
 
 `sudo usermod -a -G video pi`
 
+Additional installation requerments
+```
+
+cd plugins cd input/output 
+sudo cp input_uvc.so / output_http.so ../../
+
+```
+
 **7. MJPG-streamer service installation**
 
 ```
