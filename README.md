@@ -4,7 +4,9 @@ Installing MJPG-streamer for multiple cameras can be simplified by using the scr
 
 **1. Install build dependencies**
 
-`sudo apt-get updatesudo apt-get install libjpeg8-dev imagemagick libv4l-dev v4l-utils make gcc git cmake g++`
+`sudo apt-get update` 
+
+`sudo apt-get install libjpeg9-dev imagemagick libv4l-dev v4l-utils make gcc git cmake g++`
 
 **2. Download MJPG-streamer**
 
@@ -17,6 +19,10 @@ Installing MJPG-streamer for multiple cameras can be simplified by using the scr
 **4. Build MJPG-streamer**
 
 `cmake -G &quot;Unix Makefiles&quot;make`
+
+`OR`
+
+`cmake -G "Unix Makefiles"`
 
 **5. Install MJPG-streamer**
 
@@ -36,6 +42,10 @@ cd mjpg-streamer-setup
 ./installWebcams install
 exit
 ```
+
+TO RUN
+`./mjpg_streamer -i "input_uvc.so -d /dev/video0 -r 1280x720" -o "output_http.so" &`
+
 
 Now installed webcams are running and can be viewed. Raspi-webcam is reachable over port 8090 while the usb webcams 0-9 are reachable from ports 5050 to 5059. You can also control the service as the pi user using the `installWebcams` command.
 
